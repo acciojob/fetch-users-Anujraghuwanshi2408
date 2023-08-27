@@ -27,14 +27,14 @@ const Details = () => {
             </thead>
             <tbody>
                 {
-                  data.map(element => {
+                (data.length==0)? <p>No data found to display.</p> : data.map(element => {
                     return(
                         <tr>
                             <td>{element.first_name}</td>
                             <td>{element.last_name}</td>
                             <td>{element.email}</td>
-                            <td><image 
-                            src = {element.avatar}/></td>
+                            <td><img 
+                            src= {element.avatar}/></td>
                         </tr>
                     )
                   })
